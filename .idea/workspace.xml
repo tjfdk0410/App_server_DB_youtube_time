@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51d0a0af-f93e-47ca-862a-b50c4a294290" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/madcamp_client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/madcamp_client/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/release/app-release.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/release/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/androidTest/java/com/example/madcamp_1st/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/ContactFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/CustomFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/GalleryFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/GalleryFullscreenFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/GalleryImageClickListener.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/GalleryRVAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/Image.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/MainAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/MainRvAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/helper/ZoomOutPageTransformer.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/java/com/example/madcamp_1st/item.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable-v24/contact_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable-v24/item_border.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable-v24/photo_gallery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/apple.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/beach01.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/beach02.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/cat.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/dog.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/jellyfish.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/lake.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/ocean.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/people.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/rectangle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/sea.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/drawable/sunrise.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/font/font.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/font/luthier_bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/font/luthier_italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/font/luthier_regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/font/uhbee.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/contact_popup.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/contacts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/custom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/fragment_gallery_fullscreen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/gallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/gallery_rv_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/image_fullscreen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/layout/item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/menu/bottom_navigation_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/app/src/test/java/com/example/madcamp_1st/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/bash.exe.stackdump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/madcamp_client/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/madcamp_2nd/madcamp_2nd.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/madcamp_2nd/madcamp_1st.iml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/madcamp_2nd.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="madcamp_2nd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madcamp_2nd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="madcamp_2nd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="madcamp_2nd" type="462c0819:PsiDirectoryNode" />
+              <item name="madcamp_2nd" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51d0a0af-f93e-47ca-862a-b50c4a294290" name="Default Changelist" comment="" />
+      <created>1578143979247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578143979247</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32982087" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/madcamp_2nd/madcamp_2nd.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
