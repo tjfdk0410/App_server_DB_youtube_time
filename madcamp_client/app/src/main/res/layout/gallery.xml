@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GalleryFragment">
+
+    <!--    <Button-->
+<!--        android:id="@+id/img_pick_btn"-->
+<!--        style="@style/Base.Widget.AppCompat.Button.Colored"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50sp"-->
+<!--        android:text="+"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+
+<!--        app:layout_constraintTop_toBottomOf="@+id/gallRecyclerView" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="530sp"
+        android:layout_marginTop="0sp"
+        android:paddingTop="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"></androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/img_pick_btn"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/circle"
+        android:text="+"
+        android:textSize="30sp"
+        android:textColor="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/gallRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/gallRecyclerView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="0sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="25sp"
+        android:text="@string/gallery"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/gallRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

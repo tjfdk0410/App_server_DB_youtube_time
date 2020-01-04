@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/contact_book"
+        android:title="@string/contacts" />
+    <item
+        android:id="@+id/navigation_gallery"
+        android:icon="@drawable/photo_gallery"
+        android:title="@string/gallery" />
+    <item
+        android:id="@+id/navigation_custom"
+        android:title="@string/custom" />
+</menu>
+<!--    icon 추가하기-->
