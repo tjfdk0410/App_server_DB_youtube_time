@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--화면 계속 아래로 내리면 보이는 색-->
+        <item name="colorPrimary">@color/mediumpurple</item>
+        <item name="android:fontFamily">@font/luthier_bold</item>
+
+        <!-- 위에 앱 바-->
+        <item name="colorPrimaryDark">@color/mediumpurple</item>
+
+        <!--아래 select-->
+        <item name="colorAccent">@color/mediumpurple</item>
+
+<!--        <item name="colorAccent">@color/colorPrimaryDark </item>-->
+    </style>
+
+</resources>

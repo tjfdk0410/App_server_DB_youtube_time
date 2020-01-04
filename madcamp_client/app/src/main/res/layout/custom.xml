@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/custom_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="302sp"
+            android:contentDescription="resultImage"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_finder" />
+
+        <TextureView
+            android:id="@+id/view_finder"
+            android:layout_width="match_parent"
+            android:layout_height="302sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".GalleryFragment">-->
+
+<!--<LinearLayout-->
+<!--    android:id="@+id/GalleryFragment"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:gravity="center_horizontal"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".GalleryFragment">-->
+
+<!--    &lt;!&ndash;ImageView where image will be set&ndash;&gt;-->
+<!--    &lt;!&ndash;Button to pick image&ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/custom_image_view"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="400dp"-->
+<!--        android:background="#00AD0B0B"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:srcCompat="@mipmap/ic_launcher" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/custom_img_pick_btn"-->
+<!--        style="@style/Base.Widget.AppCompat.Button.Colored"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Choose Image" />-->
+
+<!--</LinearLayout>-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
