@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         default_login_button.setOnClickListener {
             var startintent = Intent(this@MainActivity, MainActivityTwo::class.java)
-            Toast.makeText(this,"로그인 되지 않았습니다. \n 앞으로의 행동은 저장되지 않습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"로그인 되지 않았습니다."+"앞으로의 행동은 저장되지 않습니다.", Toast.LENGTH_SHORT).show()
             //startintent.putExtra("CHECK", 1234)
             startActivity(startintent)
         }

@@ -15,7 +15,7 @@ class MainAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_
         when (position) {
             0 -> ContactFragment()
             1 -> GalleryFragment()
-            //2 -> CustomFragment()
+            2 -> CustomFragment()
             else -> ContactFragment()
         }
 
@@ -27,8 +27,8 @@ class MainAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_
         return when (position){
             0 -> "Contacts"
             1 -> "Gallery"
-            //2 -> "Custom"
-            else -> "Contacts";
+            2 -> "Custom"
+            else -> "Contacts"
         }
     }
 }
