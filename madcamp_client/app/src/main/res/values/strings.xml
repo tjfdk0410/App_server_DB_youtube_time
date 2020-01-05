@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MadCamp_1st</string>
+    <string name="app_name">MadCamp_2nd</string>
     <string name="contacts">
         Contacts
     </string>
@@ -15,4 +15,7 @@
     <string name="contact_popup_title">
         "add contact"
     </string>
+
+    <string name="facebook_app_id">457729538442700</string>
+    <string name="fb_login_protocol_scheme">fb457729538442700</string>
 </resources>

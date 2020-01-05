@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#efefef">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.madcamp_2nd.MainActivity">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="670sp"
-        android:paddingTop="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/tab"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
-    </androidx.viewpager.widget.ViewPager>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="13dp"></LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btn_facebook_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/default_login_button"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:textSize="15sp"
+        android:text="Continue with default" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/contact_book"
-            android:text="@string/contacts" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="13dp">
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/photo_gallery"
-            android:text="@string/gallery" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/custom" />
 
-    </com.google.android.material.tabs.TabLayout>
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
