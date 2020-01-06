@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.fb_app.tab2_fb
 
 import android.content.Context
 import android.net.Uri
@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.madcamp_2nd.R
 import kotlinx.android.synthetic.main.gallery.*
 
 //import com.thesimplycoder.imagegallery.adapter.Image

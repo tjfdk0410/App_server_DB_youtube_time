@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.fb_app.tab2_fb
 
 import android.Manifest
 import android.app.Activity
@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.madcamp_2nd.R
 import kotlinx.android.synthetic.main.gallery.*
 
 //import com.example.madcamp_1st.GalleryImageClickListener
@@ -82,6 +83,7 @@ class GalleryFragment: Fragment() {
 
 
     private fun loadImages(){
+        /****************************************
         imgList.add(Image("jellyfish", Uri.parse("")))
         imgList.add(Image("beach01", Uri.parse("")))
         imgList.add(Image("sea", Uri.parse("")))
@@ -94,6 +96,7 @@ class GalleryFragment: Fragment() {
         imgList.add(Image("dog", Uri.parse("")))
         imgList.add(Image("lake", Uri.parse("")))
         galleryAdapter.notifyDataSetChanged()
+        ******************************************/
     }
 
     fun onClick(position: Int) {

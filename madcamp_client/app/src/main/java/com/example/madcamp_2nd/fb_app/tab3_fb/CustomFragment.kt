@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.fb_app.tab3_fb
 
 import android.Manifest
 import android.app.AppOpsManager

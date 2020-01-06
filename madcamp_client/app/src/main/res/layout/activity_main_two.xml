@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityTwo"
     android:background="#efefef">
 
     <Button
         android:id="@+id/btn_facebook_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:textSize="20sp"
         android:text="LogOut" />
 
     <androidx.viewpager.widget.ViewPager
@@ -52,6 +53,7 @@
             android:id="@+id/tab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:icon="@drawable/pencil"
             android:text="@string/custom" />
 
     </com.google.android.material.tabs.TabLayout>

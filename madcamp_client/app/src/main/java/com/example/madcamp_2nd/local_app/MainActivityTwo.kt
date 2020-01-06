@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.local_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -54,7 +54,6 @@ class MainActivityTwo : AppCompatActivity() {
 
         // sync view pager with tabs
         tab.setupWithViewPager(view_pager)
-
         setPermissions()
 
         // 로그아웃 구현
@@ -64,25 +63,19 @@ class MainActivityTwo : AppCompatActivity() {
             setResult(Activity.RESULT_OK)
             finish()
         }
-
-        //어플 시간 보기 권한 체크
-        fun checkForPermission(): Boolean {
-            val appOps = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
-            val mode = appOps.unsafeCheckOpNoThrow(OPSTR_GET_USAGE_STATS, android.os.Process.myUid(), packageName)
-            return mode == MODE_ALLOWED
-        }
-
-        //권한 없을시 세팅 들어가서 설정하게 해주기
-        if (!checkForPermission()) {
-            //Log.i(TAG, "The user may not allow the access to apps usage. ")
-            Toast.makeText(this, "Failed to retrieve app usage statistics. " + "You may need to enable access for this app through " + "Settings > Security > Apps with usage access",
-                Toast.LENGTH_LONG).show()
-            startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
-        } else {
-            // We have the permission. Query app usage stats.
-        }
-
     }
+
+    //뒤로가기 한 번 눌렸을 때 이상한 짓 못하게 하려고
+    private var time: Long = 0
+    override fun onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis()
+            Toast.makeText(applicationContext, "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show()
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finish()
+        }
+    }
+
 
 
 
@@ -105,16 +98,6 @@ class MainActivityTwo : AppCompatActivity() {
         return queryUsageStats
     }
 *************************************************/
-
-    private var time: Long = 0
-    override fun onBackPressed() {
-        if (System.currentTimeMillis() - time >= 2000) {
-            time = System.currentTimeMillis()
-            Toast.makeText(applicationContext, "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show()
-        } else if (System.currentTimeMillis() - time < 2000) {
-            finish()
-        }
-    }
 
     /**
      * setPermissions()

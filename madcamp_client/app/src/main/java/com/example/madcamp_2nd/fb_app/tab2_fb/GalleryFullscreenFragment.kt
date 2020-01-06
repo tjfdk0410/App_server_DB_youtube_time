@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.fb_app.tab2_fb
 
 import ZoomOutPageTransformer
 import android.content.Context
@@ -16,6 +16,7 @@ import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.madcamp_2nd.R
 
 //import com.thesimplycoder.imagegallery.adapter.Image
 //import com.example.madcamp_1st.GlideApp

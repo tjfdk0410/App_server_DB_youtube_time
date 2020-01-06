@@ -1,4 +1,4 @@
-package com.example.madcamp_2nd
+package com.example.madcamp_2nd.fb_app.tab1_fb
 
 import android.content.Context
 import android.os.Bundle
@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
+import com.example.madcamp_2nd.R
 import kotlinx.android.synthetic.main.contact_popup.*
 import kotlinx.android.synthetic.main.contacts.*
 import kotlinx.android.synthetic.main.activity_main.*
