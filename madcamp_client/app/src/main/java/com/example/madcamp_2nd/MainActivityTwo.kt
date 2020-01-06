@@ -30,6 +30,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.provider.Settings
 import android.util.Log
+import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -38,14 +39,16 @@ class MainActivityTwo : AppCompatActivity() {
 
     private val REQUEST_CODE_PERMISSIONS = 101
     private val REQUIRED_PERMISSIONS = arrayOf("android.permission.CAMERA")
+    //lateinit var UsageState: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.madcamp_2nd.R.layout.activity_main_two)
 
 //        setSupportActionBar(toolbar)
-        //Fritz.configure(this, "417e5b76c3d64043ae4ed82820985f08");
-        // set adapter for view pager
+//        Fritz.configure(this, "417e5b76c3d64043ae4ed82820985f08");
+//        set adapter for view pager
         val adapter = MainAdapter(supportFragmentManager)
         view_pager.adapter = adapter
 
@@ -69,7 +72,7 @@ class MainActivityTwo : AppCompatActivity() {
             return mode == MODE_ALLOWED
         }
 
-        //권한 없을시 세팅 들어가서 열게 해주기
+        //권한 없을시 세팅 들어가서 설정하게 해주기
         if (!checkForPermission()) {
             //Log.i(TAG, "The user may not allow the access to apps usage. ")
             Toast.makeText(this, "Failed to retrieve app usage statistics. " + "You may need to enable access for this app through " + "Settings > Security > Apps with usage access",
@@ -79,36 +82,10 @@ class MainActivityTwo : AppCompatActivity() {
             // We have the permission. Query app usage stats.
         }
 
-
-        /**************************************************
-        //private
-        fun convertTime(lastTimeUsed: Long): String{
-            var date: Date = Date(lastTimeUsed)
-            var format : SimpleDateFormat = SimpleDateFormat ("dd/MM/yyyy hh:mm a",Locale.ENGLISH)
-            return format.format(date)
-        }
-
-        //private
-        fun showUsageStats(){
-            var usageStatsManager: UsageStatsManager = getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-            var cal: Calendar = Calendar.getInstance()
-            cal.add(Calendar.DAY_OF_MONTH, -1)
-            var queryUsageStats : List<UsageStats> = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY,cal.timeInMillis, System.currentTimeMillis())
-            var stats_data : String = ""
-            for(i in 0..queryUsageStats.size-1){
-                stats_data = stats_data + "Package Name : " + queryUsageStats.get(i).packageName + "\n" +
-                        "Last Time Used : " + convertTime(queryUsageStats.get(i).lastTimeUsed) + "\n" +
-                        "Describe Contents : " + queryUsageStats.get(i).describeContents() + "\n" +
-                        "First Time Stamp : " + convertTime(queryUsageStats.get(i).firstTimeStamp) + "\n" +
-                        "Last Time Stamp : " + convertTime(queryUsageStats.get(i).lastTimeStamp) + "\n" +
-                        "Total Time in Foreground : " + convertTime(queryUsageStats.get(i).totalTimeInForeground) + "\n"
-            }
-
-        }
-        **************************************************************/
-
-
     }
+
+
+
 
     /********
     //default 유저 왔을시

@@ -27,6 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true">
+        <activity android:name=".CustomActivity"/>
         <activity android:name=".MainActivityTwo"/>
         <activity android:name=".MainActivity">
             <intent-filter>
