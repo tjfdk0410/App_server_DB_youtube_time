@@ -10,7 +10,7 @@ import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main_two.*
 import com.facebook.login.LoginManager
 import android.app.Activity
-
+import com.facebook.AccessToken
 
 
 class MainActivityTwo : AppCompatActivity() {
@@ -18,7 +18,7 @@ class MainActivityTwo : AppCompatActivity() {
     private val REQUEST_CODE_PERMISSIONS = 101
     private val REQUIRED_PERMISSIONS = arrayOf("android.permission.CAMERA")
     //lateinit var UsageState: TextView
-
+    var FACE_BOOK_ID: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +33,9 @@ class MainActivityTwo : AppCompatActivity() {
         // sync view pager with tabs
         tab.setupWithViewPager(view_pager)
         setPermissions()
+
+        val accessToken = AccessToken.getCurrentAccessToken()
+        FACE_BOOK_ID = accessToken.userId
 
         // 로그아웃 구현
         btn_facebook_logout.setOnClickListener {

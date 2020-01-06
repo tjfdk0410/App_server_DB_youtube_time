@@ -13,18 +13,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.contacts.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madcamp_2nd.R
-import kotlinx.android.synthetic.main.contact_popup.*
-import kotlinx.android.synthetic.main.contacts.*
-import kotlinx.android.synthetic.main.activity_main.*
+import com.facebook.AccessToken
 
 
 class ContactFragment: Fragment() {
 
     var itemList = arrayListOf<Item>()
+
+    var FACE_BOOK_ID: String? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +32,12 @@ class ContactFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         loadMyContacts()
+
+        val accessToken = AccessToken.getCurrentAccessToken()
+        FACE_BOOK_ID = accessToken.userId
+
         return inflater.inflate(R.layout.contacts, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

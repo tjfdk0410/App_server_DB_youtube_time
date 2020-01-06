@@ -31,6 +31,8 @@
         <activity android:name=".local_app.tab3_local.CustomActivity"/>
         <activity android:name=".fb_app.MainActivityTwo"/>
         <activity android:name=".local_app.MainActivityTwo"/>
+        <activity android:name=".fb_app.tab3_fb.CustomFlowerActivity"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

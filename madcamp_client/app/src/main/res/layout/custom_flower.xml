@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/flower"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/flower" />
+
+        <ImageView
+            android:id="@+id/padle1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="@+id/padle5"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="0"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/flower"
+            app:layout_constraintStart_toStartOf="@+id/flower"
+            app:layout_constraintTop_toTopOf="@+id/padle5"
+            app:srcCompat="@drawable/padle1" />
+
+        <ImageView
+            android:id="@+id/padle2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle4"
+            app:layout_constraintStart_toStartOf="@+id/padle4"
+            app:layout_constraintTop_toTopOf="@+id/padle1"
+            app:srcCompat="@drawable/padle2" />
+
+        <ImageView
+            android:id="@+id/padle3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="90"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle7"
+            app:layout_constraintStart_toEndOf="@+id/padle7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/padle3" />
+
+        <ImageView
+            android:id="@+id/padle4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="135"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle3"
+            app:layout_constraintTop_toTopOf="@+id/padle3"
+            app:srcCompat="@drawable/padle4" />
+
+        <ImageView
+            android:id="@+id/padle5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle1"
+            app:layout_constraintStart_toStartOf="@+id/padle1"
+            app:layout_constraintTop_toTopOf="@+id/padle6"
+            app:srcCompat="@drawable/padle5" />
+
+        <ImageView
+            android:id="@+id/padle6"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="71dp"
+            app:layout_constraintBottom_toBottomOf="@+id/padle4"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="225"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/padle4"
+            app:srcCompat="@drawable/padle6" />
+
+        <ImageView
+            android:id="@+id/padle7"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="270"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/flower"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/padle7" />
+
+        <ImageView
+            android:id="@+id/padle8"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="@+id/padle2"
+            app:layout_constraintCircle="@+id/flower"
+            app:layout_constraintCircleAngle="315"
+            app:layout_constraintCircleRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/padle6"
+            app:layout_constraintStart_toStartOf="@+id/padle6"
+            app:layout_constraintTop_toTopOf="@+id/padle2"
+            app:srcCompat="@drawable/padle8" />
+
+        <ImageView
+            android:id="@+id/center"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/center" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -7,12 +7,13 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context="com.example.madcamp_2nd.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="8">
 
         <LinearLayout
             android:layout_width="match_parent"

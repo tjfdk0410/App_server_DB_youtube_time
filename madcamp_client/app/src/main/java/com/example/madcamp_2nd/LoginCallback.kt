@@ -14,7 +14,7 @@ import org.json.JSONObject
 
 class LoginCallback : FacebookCallback<LoginResult> {
 
-    // 로그인 성공 시 호출 됩니다. Access Token 발급 성공.
+    // 로그인 성공 시 호출. Access Token 발급 성공.
     override fun onSuccess(loginResult: LoginResult) {
         Log.e("Callback :: ", "onSuccess")
         requestMe(loginResult.accessToken)
@@ -34,6 +34,8 @@ class LoginCallback : FacebookCallback<LoginResult> {
     // 사용자 정보 요청
 
     fun requestMe(token: AccessToken) {
+        //var FACE_BOOK_ID: String? = null
+
         val graphRequest = GraphRequest.newMeRequest(
             token
         ) { `object`, response -> Log.e("result", `object`.get("id") as String) }

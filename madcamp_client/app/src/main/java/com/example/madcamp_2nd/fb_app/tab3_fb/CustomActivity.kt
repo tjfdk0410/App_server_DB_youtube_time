@@ -11,12 +11,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.madcamp_2nd.R
+import com.facebook.Profile
 import java.text.SimpleDateFormat
 import java.util.*
 
 class CustomActivity : AppCompatActivity() {
 
     lateinit var tvUsageStats: TextView
+    var FACE_BOOK_ID: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,8 @@ class CustomActivity : AppCompatActivity() {
             startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS))
         } else {
             // 권한 생겼으니 실행
+            FACE_BOOK_ID = Profile.getCurrentProfile().getId().toString()
+
             showUsageStats()
         }
     }

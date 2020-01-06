@@ -38,12 +38,14 @@ import android.content.res.Configuration
 import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
+import com.facebook.AccessToken
 import kotlinx.android.synthetic.main.gallery.*
 
 
 class CustomFragment: Fragment() {
 
 //    lateinit var UsageState: TextView
+    var FACE_BOOK_ID: String? = null
 
 
     override fun onCreateView(
@@ -52,12 +54,21 @@ class CustomFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(com.example.madcamp_2nd.R.layout.custom, container, false) //fragement 생성 위한 view를 custom에서 띄우고 반환
+
+        val accessToken = AccessToken.getCurrentAccessToken()
+        FACE_BOOK_ID = accessToken.userId
+
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         custom_activity_button.setOnClickListener {
             val intent = Intent(context, CustomActivity::class.java)
+            startActivity(intent)
+        }
+
+        custom_flower_button.setOnClickListener {
+            val intent = Intent(context, CustomFlowerActivity::class.java)
             startActivity(intent)
         }
     }

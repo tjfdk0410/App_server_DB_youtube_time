@@ -6,11 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
     <Button
-        android:id="@+id/custom_activity_button"
+        android:id="@+id/custom_flower_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_weight="0.5"
+        android:background="@drawable/enter"
+        android:focusableInTouchMode="true"
+        android:minWidth="0dp"
+        android:minHeight="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/custom_activity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:text="see log"
+            android:textSize="20sp"/>
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -56,12 +56,12 @@ class CustomFragment: Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        /**************로그인 없으면 기능 막기******************
         custom_activity_button.setOnClickListener {
-            val intent = Intent(context, CustomActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(context, CustomActivity::class.java)
+//            startActivity(intent)
+            Toast.makeText(getActivity(), "로그인 없이 기능을 실행할 수 없습니다", Toast.LENGTH_LONG).show()
         }
-        ********************************************************/
+
     }
 
 }

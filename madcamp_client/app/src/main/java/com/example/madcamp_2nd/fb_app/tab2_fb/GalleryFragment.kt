@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.madcamp_2nd.R
+import com.facebook.AccessToken
 import kotlinx.android.synthetic.main.gallery.*
 
 //import com.example.madcamp_1st.GalleryImageClickListener
@@ -32,6 +33,8 @@ class GalleryFragment: Fragment() {
     private var SPAN_COUNT = 2
     lateinit var galleryAdapter: GalleryRVAdapter
 
+    var FACE_BOOK_ID: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +42,10 @@ class GalleryFragment: Fragment() {
     ): View? {
 
         var view = inflater.inflate(R.layout.gallery, container, false) //fragement 생성 위한 view를 gallery에서 띄우고 반환
+
+        val accessToken = AccessToken.getCurrentAccessToken()
+        FACE_BOOK_ID = accessToken.userId
+
         return view
     }
 
@@ -55,7 +62,6 @@ class GalleryFragment: Fragment() {
         val layoutManager = GridLayoutManager(requireContext(), SPAN_COUNT)
         gallRecyclerView.layoutManager = layoutManager
         gallRecyclerView.setHasFixedSize(true)
-
 
         img_pick_btn.setOnClickListener {
             //check runtime permission
