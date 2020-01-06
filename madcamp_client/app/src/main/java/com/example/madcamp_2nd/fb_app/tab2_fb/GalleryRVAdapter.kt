@@ -13,6 +13,7 @@ import com.example.madcamp_2nd.R
 
 //import com.thesimplycoder.imagegallery.adapter.Image
 
+
 class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, val supportFragmentManager: FragmentManager) : RecyclerView.Adapter<GalleryRVAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -33,6 +34,7 @@ class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, va
 
 
         fun bind(Im: Image) {
+
 //            if (Im.uri == Uri.parse("")){
 //                if (context != null) {
 //                    val resourceId = context.resources.getIdentifier(Im.name,
@@ -46,6 +48,7 @@ class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, va
 //            else  {
 //                gallPhoto.setImageURI(Im.uri)
 //            }
+
 
             gallPhoto.setOnClickListener {
 
@@ -62,8 +65,10 @@ class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, va
 //                // handle click of image
                 val fragmentTransaction = supportFragmentManager.beginTransaction()
 ////                supportFragmentManager.beginTransaction().replace(R.id.gallphoto, GalleryFullscreenFragment()).commit()
+
                 val galleryFullFragment =
                     GalleryFullscreenFragment()//full인지 아닌지
+
                 galleryFullFragment.arguments = bundle
                 galleryFullFragment.show(fragmentTransaction, "gallery")
 

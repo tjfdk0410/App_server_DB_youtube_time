@@ -1,13 +1,19 @@
 package com.example.madcamp_2nd.fb_app.tab2_fb
 
+
+import android.Manifest
+
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -21,6 +27,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
+
 //image pick code
 private val IMAGE_PICK_CODE = 1000
 //Permission code
@@ -32,15 +39,20 @@ class GalleryFragment: Fragment() {
     private var SPAN_COUNT = 2
     lateinit var galleryAdapter: GalleryRVAdapter
 
+
     //add to upload
     var responseText: TextView? = null
     private var apiInterface: APIInterface? = null
+
+    var FACE_BOOK_ID: String? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         var view = inflater.inflate(R.layout.gallery, container, false) //fragement 생성 위한 view를 gallery에서 띄우고 반환
 
 
@@ -157,15 +169,20 @@ class GalleryFragment: Fragment() {
 //            }
 //        })
 
+
+        var view = inflater.inflate(R.layout.gallery, container, false) //fragement 생성 위한 view를 gallery에서 띄우고 반환
+
+        val accessToken = AccessToken.getCurrentAccessToken()
+        FACE_BOOK_ID = accessToken.userId
+
+
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        galleryAdapter = GalleryRVAdapter(
-            requireContext(),
-            imgList,
-            requireActivity().supportFragmentManager
-        )
+
+        galleryAdapter = GalleryRVAdapter(requireContext(), imgList, requireActivity().supportFragmentManager)
+
         gallRecyclerView.adapter = galleryAdapter
 //        galleryAdapter.listner = this
 
@@ -177,6 +194,7 @@ class GalleryFragment: Fragment() {
         val layoutManager = GridLayoutManager(requireContext(), SPAN_COUNT)
         gallRecyclerView.layoutManager = layoutManager
         gallRecyclerView.setHasFixedSize(true)
+
 
 //        responseText = view.findViewById<TextView>(R.id.responsenseText)
 
@@ -239,6 +257,7 @@ class GalleryFragment: Fragment() {
 //        imgList.add(Image("dog", Uri.parse("")))
 //        imgList.add(Image("lake", Uri.parse("")))
         galleryAdapter.notifyDataSetChanged()
+
     }
 
     fun onClick(position: Int) {
@@ -248,8 +267,10 @@ class GalleryFragment: Fragment() {
         bundle.putInt("position",position)
 
         val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+
         val galleryFullFragment =
             GalleryFullscreenFragment()
+
         galleryFullFragment.arguments = bundle
         galleryFullFragment.show(fragmentTransaction,"gallery")
     }
@@ -267,6 +288,7 @@ class GalleryFragment: Fragment() {
         startActivityForResult(Intent.createChooser(intent, "Select picture"),
             IMAGE_PICK_CODE
         )
+
     }
 
 
@@ -313,7 +335,9 @@ class GalleryFragment: Fragment() {
             if (clipData != null) {
                 for (i in 0 until clipData.itemCount) {
                     val str = clipData.getItemAt(i).uri
+
 //                    imgList.add(Image( "galleryphoto_0" + i, str))
+
                 }
             }
             galleryAdapter.notifyDataSetChanged()

@@ -62,7 +62,9 @@ class GalleryFullscreenFragment : DialogFragment() {
         object : ViewPager.OnPageChangeListener {
             override fun onPageSelected(position: Int) {
                 // set gallery title
+
 //                tvGalleryTitle.text = imageList[position].name
+
             }
             override fun onPageScrolled(arg0: Int, arg1: Float, arg2: Int) {
             }
@@ -79,6 +81,7 @@ class GalleryFullscreenFragment : DialogFragment() {
             val Photo = view.findViewById<ImageView>(R.id.ivFullscreenImage)
             val image = imageList.get(position)
             // load image
+
 //            if (image.uri == Uri.parse("")){
 //                if (context != null) {
 //                    val resourceId = context!!.resources.getIdentifier(image.name,
@@ -92,6 +95,7 @@ class GalleryFullscreenFragment : DialogFragment() {
 //            else  {
 //                Photo.setImageURI(image.uri)
 //            }
+
 //            GalleryPagerAdapter().notifyDataSetChanged()
 
             container.addView(view)

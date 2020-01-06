@@ -2,6 +2,7 @@ package com.example.madcamp_2nd.fb_app.tab2_fb
 
 import android.net.Uri
 
+
 class Image(val name: String, val uri: Uri)
 //data class Image (
 //    val meta: ImageMeta,
@@ -25,3 +26,4 @@ class Image(val name: String, val uri: Uri)
 //    val datetime: String, // 이미지 등록일 ISO 8601. [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss].000+[tz],
 //    var favorite: Boolean = false //override
 //)
+
