@@ -35,11 +35,15 @@ import java.util.*
 import android.R
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.os.AsyncTask
 import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.facebook.AccessToken
+import io.github.rybalkinsd.kohttp.dsl.httpPost
+import io.github.rybalkinsd.kohttp.ext.url
 import kotlinx.android.synthetic.main.gallery.*
+import org.json.JSONObject
 
 
 class CustomFragment: Fragment() {
@@ -71,8 +75,8 @@ class CustomFragment: Fragment() {
             val intent = Intent(context, CustomFlowerActivity::class.java)
             startActivity(intent)
         }
-    }
 
+    }
 }
 
 

@@ -50,8 +50,10 @@
         <ImageView
             android:id="@+id/padle3"
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="266dp"
+            android:layout_marginBottom="87dp"
+            app:layout_constraintBottom_toTopOf="@+id/custom_upload_button"
             app:layout_constraintCircle="@+id/flower"
             app:layout_constraintCircleAngle="90"
             app:layout_constraintCircleRadius="50dp"
@@ -138,6 +140,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/center" />
+
+        <Button
+            android:id="@+id/custom_upload_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="180dp"
+            android:text="upload log"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/padle3" />
+
+        <Button
+            android:id="@+id/custom_get_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="80dp"
+            android:text="see log"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/padle3" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

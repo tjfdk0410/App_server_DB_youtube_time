@@ -20,8 +20,7 @@ import java.util.*
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
-
+import com.example.madcamp_2nd.fb_app.MainActivityTwo
 
 
 class MainActivity : AppCompatActivity() {
@@ -44,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         btn_facebook_login!!.setPermissions(Arrays.asList("public_profile", "email"))
         btn_facebook_login!!.registerCallback(mCallbackManager, mLoginCallback)
 
+        // 첫 화면에서 로그인 여부 확인
+        val accessToken = AccessToken.getCurrentAccessToken()
+        val isLoggedIn = accessToken != null && !accessToken.isExpired
+        if(isLoggedIn){
+            val intent = Intent(this, MainActivityTwo::class.java)
+            startActivity(intent)
+        }
 
         //페이스북 로그인 없이 사용
         default_login_button.setOnClickListener {

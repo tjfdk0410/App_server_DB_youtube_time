@@ -50,9 +50,8 @@ class CustomActivity : AppCompatActivity() {
             stats_data =
                 stats_data + "Package Name : " + queryUsageStats.get(i).packageName + "\n\n" +
                         "Last Time Used : " + convertTime1(queryUsageStats.get(i).lastTimeUsed) + "\n" +
-                        "Describe Contents : " + queryUsageStats.get(i).describeContents() + "\n" +
-                        "First Time Stamp : " + convertTime1(queryUsageStats.get(i).firstTimeStamp) + "\n" +
-                        "Last Time Stamp : " + convertTime1(queryUsageStats.get(i).lastTimeStamp) + "\n" +
+                        "처음 사용한 시간 : " + convertTime1(queryUsageStats.get(i).firstTimeStamp) + "\n" +
+                        "마지막으로 사용한 시간 : " + convertTime1(queryUsageStats.get(i).lastTimeStamp) + "\n" +
                         "Total Time in Foreground : " + convertTime2(queryUsageStats.get(i).totalTimeInForeground) + "\n\n"
         }
         tvUsageStats.setText(stats_data)

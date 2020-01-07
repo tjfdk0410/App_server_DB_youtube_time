@@ -37,6 +37,7 @@
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:text="see log"
             android:textSize="20sp"/>
+
     </LinearLayout>
 
 

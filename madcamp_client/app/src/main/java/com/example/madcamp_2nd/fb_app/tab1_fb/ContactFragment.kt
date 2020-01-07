@@ -7,23 +7,23 @@ import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RatingBar
 import android.util.Log
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.contacts.*
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
-import com.example.madcamp_2nd.R
+import com.example.madcamp_2nd.fb_app.tab2_fb.GalleryRVAdapter
 import com.facebook.AccessToken
+import com.google.gson.JsonArray
 
 import io.github.rybalkinsd.kohttp.dsl.httpDelete
 import io.github.rybalkinsd.kohttp.dsl.httpPost
 import io.github.rybalkinsd.kohttp.ext.url
+import org.json.JSONArray
+import org.json.JSONObject
 import java.net.URL
 
 
@@ -33,92 +33,110 @@ class ContactFragment: Fragment() {
 
     var FACE_BOOK_ID: String? = null
 
+    lateinit var mAdapter : MainRvAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        loadMyContacts()
+
+        val view = inflater.inflate(com.example.madcamp_2nd.R.layout.contacts, container, false)
+        //loadMyContacts()
 
         val accessToken = AccessToken.getCurrentAccessToken()
         FACE_BOOK_ID = accessToken.userId
 
-//        //버튼 클릭시 리스너로 간다.
-//        contact_sync_button.setOnClickListener{
-//            JSONTask().execute("http://192.249.19.254:6080/") //AsyncTask 시작시킴
-//
-//        }
-//        contact_upload_button.setOnClickListener{
-//            JSONTask().execute("http://192.249.19.254:6080/") //AsyncTask 시작시킴
-//        }
-
-        return inflater.inflate(R.layout.contacts, container, false)
+        return view
     }
-
-
-//    inner class JSONTask : AsyncTask<String?, String?, String?>() {
-//        override fun doInBackground(vararg urls: String?): String? {
-//            try {
-//                var post = httpPost { url("http://192.249.19.254:6080/api/contacts")
-//                    body {
-//                        form("user_id=123456789&" + "phNum=010-2222-6666&" + "name=newPeople")
-//                    }
-//                }
-//                Log.i("post>>>>>>>>>>>>>>>>>>", post.message())
-//                ​
-//                var get =
-//                    URL("http://192.249.19.254:6080/api/contacts/user_id/dddafd@d34d.com").readText() // 로그인한 유저가 받은 아이디로 찾기 //not found 일 때 처리
-//                Log.i(
-//                    "get>>>>>>>>>>>>>>>>",
-//                    get
-//                ) //형태>> [{"_id":"5e11cddde1fc032f3ba8e4c3","phNum":"010-121324-1124","name":"dafoudfasfi"}]
-//                //parsing code 필요
-//                ​
-//                ​
-//                var delete = httpDelete {
-//                    url("http://192.249.19.254:6080/api/contacts/5e11cddde1fc032f3ba8e4c3")
-//                }
-//                Log.i("delete>>>>>>>>>>>>>>>>", delete.message())
-//                ​
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//            return null
-//        }
-//    }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // set recycler view
-        val mAdapter = MainRvAdapter(requireContext(), itemList)
+        mAdapter = MainRvAdapter(requireContext(), itemList)
         recycler_view.adapter = mAdapter
+
+        val sync_button :Button = view.findViewById(com.example.madcamp_2nd.R.id.contact_sync_button)
+        sync_button.setOnClickListener{
+            JSONTaskGet().execute("http://192.249.19.254:8080/") //AsyncTask 시작시킴
+            for (i in 0..100000000){
+            }
+            mAdapter.notifyDataSetChanged()
+            recycler_view.adapter = mAdapter
+        }
 
         // set contact add button listener
         contact_add_button.setOnClickListener {
             val builder = AlertDialog.Builder(requireContext())
-            val dialogView = layoutInflater.inflate(R.layout.contact_popup, null)
-            val user_name = dialogView.findViewById<EditText>(R.id.popup_user_name)
-            val phone_number = dialogView.findViewById<EditText>(R.id.popup_phone_number)
+            val dialogView = layoutInflater.inflate(com.example.madcamp_2nd.R.layout.contact_popup, null)
+            val user_name = dialogView.findViewById<EditText>(com.example.madcamp_2nd.R.id.popup_user_name)
+            val phone_number = dialogView.findViewById<EditText>(com.example.madcamp_2nd.R.id.popup_phone_number)
 
             builder.setView(dialogView)
                 .setPositiveButton("확인") {
                     dialogInterface, i ->
-                        val userName = user_name.text.toString()
-                        val phoneNumber = phone_number.text.toString()
-                        itemList.add(Item(userName, phoneNumber))
+                    val userName = user_name.text.toString()
+                    val phoneNumber = phone_number.text.toString()
+
+                    JSONTaskUpLoad(userName, phoneNumber).execute("http://192.249.19.254:8080/")
+
+                    itemList.add(Item(userName, phoneNumber))
+
                 }
                 .setNegativeButton("취소") {
                     dialogInterface, i ->
-
                 }
                 .show()
-
         }
 
         val layoutManager = LinearLayoutManager(requireContext())
         recycler_view.layoutManager = layoutManager
         recycler_view.setHasFixedSize(true)
+    }
+
+    inner class JSONTaskGet : AsyncTask<String?, String?, String?>() {
+        override fun doInBackground(vararg urls: String?): String? {
+            try {
+                var get = URL("http://192.249.19.254:8080/contacts/$FACE_BOOK_ID").readText()
+
+                val conList: JSONArray = JSONArray(get)
+                for (i in 0..conList.length()) {
+                    val userName: String = conList.getJSONObject(i).getString("name")
+                    val phoneNumber: String = conList.getJSONObject(i).getString("number")
+                    itemList.add(Item(userName, phoneNumber))
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return null
+        }
+    }
+
+    inner class JSONTaskUpLoad(NN:String, PN:String) : AsyncTask<String?, String?, String?>() {
+        var NewName = NN
+        var PhNum = PN
+        override fun doInBackground(vararg urls: String?): String? {
+            try {
+                val cObject: JSONObject = JSONObject()
+                cObject.put("name", "$NewName")
+                cObject.put("number", "$PhNum")
+
+                var post = httpPost { url("http://192.249.19.254:8080/contacts/$FACE_BOOK_ID")
+
+                    body {
+                        form {
+                            "UID" to FACE_BOOK_ID
+                            "contacts" to cObject
+                        }
+                    }
+                }
+                Log.i("post>>>>>>>>>>>>>>>>>>", post.message())
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return null
+        }
     }
 
     /**
