@@ -22,6 +22,7 @@ import com.example.madcamp_2nd.R
 import kotlinx.android.synthetic.main.gallery.*
 
 import com.example.madcamp_2nd.fb_app.pojo.Photo
+import com.facebook.AccessToken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,11 +53,6 @@ class GalleryFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        var view = inflater.inflate(R.layout.gallery, container, false) //fragement 생성 위한 view를 gallery에서 띄우고 반환
-
-
-
 
 
 //        /**

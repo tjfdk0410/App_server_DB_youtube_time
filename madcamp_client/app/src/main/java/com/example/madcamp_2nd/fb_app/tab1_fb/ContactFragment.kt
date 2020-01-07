@@ -1,13 +1,16 @@
 package com.example.madcamp_2nd.fb_app.tab1_fb
 
 import android.content.Context
+import android.os.AsyncTask
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.RatingBar
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.contacts.*
@@ -17,6 +20,11 @@ import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madcamp_2nd.R
 import com.facebook.AccessToken
+
+import io.github.rybalkinsd.kohttp.dsl.httpDelete
+import io.github.rybalkinsd.kohttp.dsl.httpPost
+import io.github.rybalkinsd.kohttp.ext.url
+import java.net.URL
 
 
 class ContactFragment: Fragment() {
@@ -36,9 +44,50 @@ class ContactFragment: Fragment() {
         val accessToken = AccessToken.getCurrentAccessToken()
         FACE_BOOK_ID = accessToken.userId
 
-        return inflater.inflate(R.layout.contacts, container, false)
+//        //버튼 클릭시 리스너로 간다.
+//        contact_sync_button.setOnClickListener{
+//            JSONTask().execute("http://192.249.19.254:6080/") //AsyncTask 시작시킴
+//
+//        }
+//        contact_upload_button.setOnClickListener{
+//            JSONTask().execute("http://192.249.19.254:6080/") //AsyncTask 시작시킴
+//        }
 
+        return inflater.inflate(R.layout.contacts, container, false)
     }
+
+
+//    inner class JSONTask : AsyncTask<String?, String?, String?>() {
+//        override fun doInBackground(vararg urls: String?): String? {
+//            try {
+//                var post = httpPost { url("http://192.249.19.254:6080/api/contacts")
+//                    body {
+//                        form("user_id=123456789&" + "phNum=010-2222-6666&" + "name=newPeople")
+//                    }
+//                }
+//                Log.i("post>>>>>>>>>>>>>>>>>>", post.message())
+//                ​
+//                var get =
+//                    URL("http://192.249.19.254:6080/api/contacts/user_id/dddafd@d34d.com").readText() // 로그인한 유저가 받은 아이디로 찾기 //not found 일 때 처리
+//                Log.i(
+//                    "get>>>>>>>>>>>>>>>>",
+//                    get
+//                ) //형태>> [{"_id":"5e11cddde1fc032f3ba8e4c3","phNum":"010-121324-1124","name":"dafoudfasfi"}]
+//                //parsing code 필요
+//                ​
+//                ​
+//                var delete = httpDelete {
+//                    url("http://192.249.19.254:6080/api/contacts/5e11cddde1fc032f3ba8e4c3")
+//                }
+//                Log.i("delete>>>>>>>>>>>>>>>>", delete.message())
+//                ​
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            }
+//            return null
+//        }
+//    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // set recycler view

@@ -22,17 +22,44 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <Button
+        android:id="@+id/contact_upload_button"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="145sp"
+        android:background="@drawable/circle"
+        android:text="△"
+        android:textSize="30sp"
+        android:textColor="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view" />
+
+    <Button
         android:id="@+id/contact_add_button"
         android:layout_width="60sp"
         android:layout_height="60sp"
         android:layout_marginEnd="15sp"
-        android:layout_marginBottom="15sp"
+        android:layout_marginBottom="80sp"
         android:background="@drawable/circle"
         android:text="@string/contact_add_plus"
         android:textSize="30sp"
         android:textColor="#AAAAAA"
         app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="@+id/recycler_view" />
+
+    <Button
+        android:id="@+id/contact_sync_button"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/circle"
+        android:text="▽"
+        android:textSize="30sp"
+        android:textColor="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_view" />
+
 
     <TextView
         android:id="@+id/textView"
