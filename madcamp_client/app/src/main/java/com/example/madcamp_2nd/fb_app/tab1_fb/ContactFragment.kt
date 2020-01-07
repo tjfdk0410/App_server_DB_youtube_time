@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.contacts.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
-import com.example.madcamp_2nd.fb_app.tab2_fb.GalleryRVAdapter
+import com.example.madcamp_2nd.fb_app.tab2_fb.GalleryRVadapter
 import com.facebook.AccessToken
 import com.google.gson.JsonArray
 
