@@ -10,14 +10,18 @@ import android.widget.ImageView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madcamp_2nd.R
+import com.bumptech.glide.annotation.GlideModule
+import com.bumptech.glide.module.AppGlideModule
+
 
 //import com.thesimplycoder.imagegallery.adapter.Image
 
 
-class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, val supportFragmentManager: FragmentManager) : RecyclerView.Adapter<GalleryRVAdapter.Holder>() {
+class GalleryRVadapter(val context : Context?, var itemList:ArrayList<Image>, val supportFragmentManager: FragmentManager) : RecyclerView.Adapter<GalleryRVadapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.gallery_rv_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.gallery_rv_item, parent, false)
+        print("333333333333333333333333333333333333333")
         return Holder(view)
     }
 
@@ -27,6 +31,7 @@ class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, va
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(itemList[position])
+
     }
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,20 +39,36 @@ class GalleryRVAdapter(val context : Context?, val itemList:ArrayList<Image>, va
 
 
         fun bind(Im: Image) {
-
-//            if (Im.uri == Uri.parse("")){
-//                if (context != null) {
-//                    val resourceId = context.resources.getIdentifier(Im.name,
-//                        "drawable",
-//                        context.packageName
-//                    )
-//                    gallPhoto.setImageResource(resourceId)
+//            if (itemList != null) {
+//                for (i in 0 until itemList_web.size) {
+//                    var weburi = Uri.parse("http://192.249.19.254:8080" + itemList_web[i])
+//                    if (context != null) {
+//                        GlideApp.with(context)
+//                            .load(weburi)
+//                            .centerCrop()
+//                            .into(gallPhoto)
+//                    }
 //                }
-//
 //            }
-//            else  {
-//                gallPhoto.setImageURI(Im.uri)
-//            }
+
+            if (Im.uri == Uri.parse("")){
+                if (context != null) {
+                    val resourceId = context.resources.getIdentifier(Im.name,
+                        "drawable",
+                        context.packageName
+                    )
+                    gallPhoto.setImageResource(resourceId)
+                }
+
+            } //hard coding
+            else  {
+                if (context != null) {
+                    GlideApp.with(context)
+                        .load(Im.uri)
+                        .centerCrop()
+                        .into(gallPhoto)
+                }
+            }
 
 
             gallPhoto.setOnClickListener {

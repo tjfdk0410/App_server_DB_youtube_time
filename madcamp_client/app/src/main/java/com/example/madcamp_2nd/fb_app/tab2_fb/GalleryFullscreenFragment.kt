@@ -82,21 +82,26 @@ class GalleryFullscreenFragment : DialogFragment() {
             val image = imageList.get(position)
             // load image
 
-//            if (image.uri == Uri.parse("")){
-//                if (context != null) {
-//                    val resourceId = context!!.resources.getIdentifier(image.name,
-//                        "drawable",
-//                        context!!.packageName
-//                    )
-//                    Photo.setImageResource(resourceId)
-//                }
+            if (image.uri == Uri.parse("")){
+                if (context != null) {
+                    val resourceId = context!!.resources.getIdentifier(image.name,
+                        "drawable",
+                        context!!.packageName
+                    )
+                    Photo.setImageResource(resourceId)
+                }
 
-//            }
-//            else  {
-//                Photo.setImageURI(image.uri)
-//            }
+            }
+            else  {
+                if (context != null) {
+                    GlideApp.with(context!!)
+                        .load(image.uri)
+                        .centerCrop()
+                        .into(Photo)
+                }
+            }
 
-//            GalleryPagerAdapter().notifyDataSetChanged()
+            GalleryPagerAdapter().notifyDataSetChanged()
 
             container.addView(view)
             return view

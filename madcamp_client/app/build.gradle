@@ -53,8 +53,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.material:material:1.0.0' //toolbar, Appbar
-
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
     /* modified for style transfer */
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
 
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"

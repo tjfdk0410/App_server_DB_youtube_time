@@ -1,5 +1,5 @@
 package com.example.madcamp_2nd.fb_app.pojo
 
-import com.google.gson.annotations.SerializedName
+import org.json.JSONObject
 
-class Photo ( var photo :String )
+class Photo(var originalname:String, var filename: String)

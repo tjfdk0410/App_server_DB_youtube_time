@@ -1,33 +1,35 @@
 package com.example.madcamp_2nd.fb_app.tab2_fb
 
-import com.example.madcamp_2nd.fb_app.pojo.MultipleResource
-import com.example.madcamp_2nd.fb_app.pojo.Photo
-import com.example.madcamp_2nd.fb_app.pojo.User
-import com.example.madcamp_2nd.fb_app.pojo.UserList
+import com.example.madcamp_2nd.fb_app.pojo.*
+import com.facebook.AccessToken
+import com.google.gson.JsonArray
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.*
 
+val accessToken = AccessToken.getCurrentAccessToken()
+var FACE_BOOK_ID = accessToken.userId
+
 internal interface APIInterface {
-    @GET("gallery/images")
-    fun getimages(): Call<MultipleResource?>?
+    @POST("gallery/FACE_BOOK_ID")
+    fun createPhoto(@Body photo: Photo?): Call<Photo?>?
+
+    @GET("gallery/FACE_BOOK_ID")
+    fun getAll(@Query("gallery") gallery: ArrayList<JSONObject>?): Call<JSONObject>?
+
+
+    @GET("gallery/1561181117364134")
+    fun getAll(): Call<ArrayList<String>>?
 
     @POST("gallery/images")
     fun createUser(@Body user: User?): Call<User?>?
 
-    @POST("gallery/images")
-    fun createPhoto(@Body photo: Photo?): Call<Photo?>?
-
-    @GET("gallery/images")
-    fun doGetUserList(@Query("page") page: String?): Call<UserList?>?
-
-    @GET("gallery/images")
-    fun getallphoto(@Query("photo") photo: String?): Call<MultipleResource?>?
+    @GET("gallery/")
+//    fun getallphoto(@Query("gallery") gallery: List?): Call<MultipleResource?>?
 
     @FormUrlEncoded
     @POST("contacts/items")
-    fun doCreateUserWithField(
-        @Field("name") name: String?, @Field(
-            "number"
+    fun doCreateUserWithField(@Field("name") name: String?, @Field("number"
         ) number: String?
     ): Call<UserList?>? /*
     @GET(“api주소”)

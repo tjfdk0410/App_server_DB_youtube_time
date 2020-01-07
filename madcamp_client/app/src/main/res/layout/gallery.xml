@@ -43,6 +43,28 @@
         app:layout_constraintBottom_toBottomOf="@+id/gallRecyclerView"
         app:layout_constraintEnd_toEndOf="@+id/gallRecyclerView" />
 
+    <Button
+        android:id="@+id/imgbutton"
+        android:layout_width="122dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/circle"
+        android:text="local"
+        app:layout_constraintBottom_toBottomOf="@+id/gallRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/gallRecyclerView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/circle"
+        android:text="upload"
+        app:layout_constraintBottom_toBottomOf="@+id/gallRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/gallRecyclerView"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -58,15 +80,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/responsenseText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="40dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
